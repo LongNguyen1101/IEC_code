@@ -1,0 +1,7 @@
+1: label_encoding
+2: one_hot_encoding
+3: binary_encoding
+4: ordinal_encoding
+5: frequency_encoding
+6: target_encoder
+7: loo_encoder
