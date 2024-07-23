@@ -196,8 +196,8 @@ class BirchPSO():
 
 class SpectralClusteringPSO():
     def __init__(self, data, file_name, swarmsize: int=10, maxiter: int=10, n_cluster: int=3, verbose=False) -> None:
-        self.lb = [0, 1, 1, 1.0, 1, 0, 3.0, 1.0, 1]
-        self.ub = [1, 5, 10, 2.0, 5, 2, 5.0, 2.0, 100]
+        self.lb = [0, 1, 1, 1.0, 1, 0, 0, 1.0, 1]
+        self.ub = [1, 5, 10, 2.0, 5, 2, 5, 2.0, 100]
         self.swarmsize = swarmsize
         self.maxiter = maxiter
         self.verbose = verbose
@@ -228,7 +228,7 @@ class SpectralClusteringPSO():
                 gamma=params[3],
                 n_neighbors=int(params[4]),
                 assign_labels=self.map_assign_labels(int(params[5])),
-                degree=params[6],
+                degree=int(params[6]),
                 coef0=params[7],
                 random_state=int(params[8])
             )
